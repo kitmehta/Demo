@@ -1,0 +1,12 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- script: dotnet build
+  displayName: 'Build the project'
+
+- script: dotnet test
+  displayName: 'Run unit tests'
